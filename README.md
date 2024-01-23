@@ -71,3 +71,11 @@ gsed -e 's/label=,/label=","/g' G.dot | dot -Tpng > output.png
 ```bash
 pip install --editable .
 ```
+
+build & publish 
+
+```bash
+python3 -m build && \
+python3 -m twine upload --repository pypi dist/* --verbose
+```
+
